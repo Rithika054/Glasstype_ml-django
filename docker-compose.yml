@@ -1,0 +1,9 @@
+version: '24.0.6'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Optional, specify the Dockerfile name if it's not 'Dockerfile' in the build context.
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
